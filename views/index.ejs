@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pokedex</title>
+</head>
+<body>
+
+    <nav>
+        <img src="img/pokedex.gif" class="logopoke" alt="Logo Da Pokedex">
+
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#pokedex">Pokedex</a></li>
+            <li><a href="#cadastrar">Cadastrar</a></li>
+
+        </ul>
+
+    </nav>
+
+    <% if(message != "") {  %>
+        <section id="messagem">
+            <p><%= message %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %>
+
+    <header>
+        <article>
+            <h1>Pokedex</h1>
+            <section class="#">
+                <p>Bem vindo a mais nova ferramenta de informações sobre pokemons, Pokedex. Aqui voce ira encontrar varias informações sobre os pokemons mais queridos por todos. Pegue um cafe e vem com a gente!</p>
+                <img src="img/iniciais Kanto.png">
+            </section>
+                
+        </article>
+    </header>
+    
+    <section class="pokedex">
+        <section class="cards">
+            <img src="img/001.png">
+            <h2 class="nome">Bulbasaur</h2>
+                <h4 class="tipo">Planta</h4>
+        </section>
+        <section class="cards">
+            <img src="img/004.png">
+                <h2 class="nome">Charmander</h2>
+                <h4 class="tipo">Fogo</h4>
+
+        </section>
+
+        <section class="cards">
+            <img src="img/006.png">
+                <h2 class="nome">Charizard</h2>
+                <h4 class="tipo">Fogo</h4>
+
+        </section>
+        
+    </section>
+
+    <section id="Cadastrar">
+        <h2>Cadastre Um Novo Pokemon</h2>
+
+        <form action="/cadastra" method="Post">
+            <div>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div>
+                <label for="tipo">Tipo: </label>
+                <input type="text" name="tipo" id="tipo" placeholder="Digite um tipo" required>
+            </div>
+
+            <div>
+                <label for="imagem">Imagem: </label>
+                <input type="url" name="imagem" id="imgpk" placeholder="Cole o Link da Imagem do seu pokemon aqui!!" required>
+            </div>
+
+            <button type="submit" id="cadas">Cadastrar</button>
+        </form>
+    </section>
+
+
+
+ <script src="/js/script.js"></script>
+</body>
+</html>
