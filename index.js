@@ -29,4 +29,4 @@ app.post('/cadastra' , (req, res) =>{
   res.redirect("/", {nome: nome, tipo: tipo, imagem: imagem});
 })
 
-app.listen(3000)
+app.listen(port)
